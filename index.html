@@ -226,6 +226,31 @@
   border-radius: 12px;
   filter: contrast(1.05) brightness(0.95);
 }
+/* glow layer */
+.tower-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(224,92,46,0.0), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* hover → glow ON */
+.tower-art:hover::after {
+  opacity: 1;
+  background: radial-gradient(circle at 50% 30%, rgba(224,92,46,0.45), transparent 60%);
+}
+
+.tower-art img {
+  transition: transform 0.5s ease;
+}
+
+.tower-art:hover img {
+  transform: scale(1.05);
+}
 
   /* ── PLAYER MOCKUP (unused, kept for ref) ── */
   .player-mockup {
