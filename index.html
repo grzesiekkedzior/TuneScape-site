@@ -8,7 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/screenshots.css">
 </head>
+
 <body>
 
 <!-- NAV -->
@@ -17,6 +19,7 @@
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#changelog">Changelog</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#support">Support</a></li>
     <li><a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank">GitHub</a></li>
     <li><a href="https://sourceforge.net/projects/tunescape/files/latest/download" class="nav-cta">Download</a></li>
@@ -225,6 +228,61 @@
   </div>
 </section>
 
+<!-- SCREENSHOTS -->
+<section id="screenshots" style="max-width:1200px;">
+  <div class="section-label">In action</div>
+  <h2>See what's<br><em>inside.</em></h2>
+  <p class="section-desc">
+    A glimpse of TuneScape's interface — dark, minimal, and focused on the music.
+  </p>
+  <div class="screenshots-grid">
+
+    <div class="screenshot-card" onclick="openLightbox('assets/screen1.png', 'Main Player')">
+      <img src="assets/screen1.png" alt="TuneScape main window">
+      <div class="screenshot-caption">Main Player</div>
+    </div>
+
+    <div class="screenshot-card" onclick="openLightbox('assets/screen3.png', 'Tiles')">
+      <img src="assets/screen3.png" alt="TuneScape tiles">
+      <div class="screenshot-caption">Tiles</div>
+    </div>
+
+    <div class="screenshot-card" onclick="openLightbox('assets/screen4.png', 'Countries')">
+      <img src="assets/screen4.png" alt="TuneScape countries">
+      <div class="screenshot-caption">Countries</div>
+    </div>
+
+    <div class="screenshot-card" onclick="openLightbox('assets/screen6.png', 'Cover')">
+      <img src="assets/screen6.png" alt="TuneScape favorites">
+      <div class="screenshot-caption">Cover</div>
+    </div>
+
+    <div class="screenshot-card" onclick="openLightbox('assets/screen7.png', 'Dark Theme')">
+      <img src="assets/screen7.png" alt="TuneScape FFT spectrum visualizer">
+      <div class="screenshot-caption">Dark Theme</div>
+    </div>
+
+    <div class="screenshot-card" onclick="openLightbox('assets/screen9.png', 'Dark Theme Tiles')">
+      <img src="assets/screen9.png" alt="TuneScape dark theme">
+      <div class="screenshot-caption">Dark Theme Tiles</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-window" onclick="event.stopPropagation()">
+    <div class="lightbox-bar">
+      <span onclick="closeLightbox()"></span>
+      <span></span>
+      <span></span>
+      <div class="lightbox-title" id="lightbox-title"></div>
+    </div>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+</div>
+
 <!-- SUPPORT -->
 <section id="support" style="max-width:1200px; padding-top: 0;">
   <div class="support-block">
@@ -277,6 +335,6 @@
     <li><a href="https://www.radio-browser.info/" target="_blank">radio-browser.info</a></li>
   </ul>
 </footer>
-
+<script src="js/main.js"></script>
 </body>
 </html>

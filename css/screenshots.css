@@ -1,0 +1,121 @@
+/* ── SCREENSHOTS ── */
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.screenshot-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.screenshot-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(224,92,46,0.15),
+    0 2px 0 0 var(--accent);
+}
+
+.screenshot-card:hover::before {
+  opacity: 1;
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.92);
+  transition: filter 0.3s;
+}
+
+.screenshot-card:hover img {
+  filter: brightness(1);
+}
+
+.screenshot-caption {
+  padding: 14px 18px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-window {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}
+
+.lightbox-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.lightbox-window img {
+  display: block;
+  max-width: 90vw;
+  max-height: calc(90vh - 48px);
+  object-fit: contain;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .screenshots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .screenshots-grid {
+    grid-template-columns: 1fr;
+  }
+}
