@@ -24,3 +24,14 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  
+  const progressBar = document.getElementById("myBar");
+  if (progressBar) {
+    progressBar.style.width = scrolled + "%";
+  }
+});

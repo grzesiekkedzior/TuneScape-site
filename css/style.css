@@ -831,3 +831,23 @@
 .animate-delay-3 { transition-delay: 0.3s; }
 .animate-delay-4 { transition-delay: 0.4s; }
 .animate-delay-5 { transition-delay: 0.5s; }
+
+
+/* ── SCROLL PROGRESS BAR ── */
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05); /* Subtle background for the track */
+  z-index: 10000; /* Ensure it stays above the blurred nav */
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--accent); /* Using your defined #e05c2e color */
+  width: 0%; /* Controlled via main.js */
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 12px var(--glow); /* Using your defined glow variable */
+}
