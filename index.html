@@ -3,356 +3,395 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TuneScape — Free Internet Radio Player (Qt, Open Source)</title>
-  <meta name="description" content="TuneScape is a free open-source internet radio player built with Qt/C++.">
+
+  <title>TuneScape 6.0.0 — Free Internet Radio Player for Windows</title>
+  <meta name="description" content="TuneScape 6.0.0 is a free and open-source internet radio player for Windows. Browse thousands of stations, save favorites, record streams and control playback from the system tray.">
+  <meta name="theme-color" content="#09090f">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://grzesiekkedzior.github.io/TuneScape-site/">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/screenshots.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TuneScape 6.0.0 — Free Internet Radio Player">
+  <meta property="og:description" content="Thousands of radio stations. One clean, open-source desktop player for Windows.">
+  <meta property="og:url" content="https://grzesiekkedzior.github.io/TuneScape-site/">
+  <meta property="og:image" content="https://grzesiekkedzior.github.io/TuneScape-site/assets/app-dark.png">
+  <meta property="og:image:width" content="1156">
+  <meta property="og:image:height" content="680">
+  <meta property="og:image:alt" content="TuneScape 6.0.0 running with the Dark theme">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TuneScape",
+    "softwareVersion": "6.0.0",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Windows",
+    "description": "A free and open-source internet radio player built with Qt 6 and C++.",
+    "downloadUrl": "https://sourceforge.net/projects/tunescape/files/latest/download",
+    "codeRepository": "https://github.com/grzesiekkedzior/TuneScape",
+    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 
 <body>
-<div class="progress-container">
-  <div class="progress-bar" id="myBar"></div>
-</div>
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">Tune<span>Scape</span></a>
-  <ul class="nav-links">
-    <li><a href="#features">Features</a></li>
-    <li><a href="#changelog">Changelog</a></li>
-    <li><a href="#screenshots">Screenshots</a></li>
-    <li><a href="#support">Support</a></li>
-    <li><a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank">GitHub</a></li>
-    <li><a href="https://sourceforge.net/projects/tunescape/files/latest/download" class="nav-cta">Download</a></li>
-  </ul>
-</nav>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<!-- HERO -->
-<section class="hero" style="max-width:100%; padding-left:0; padding-right:0;">
-  <div class="hero-grid">
-    <div>
-      <div class="hero-eyebrow">v5.0.1 — Now Available</div>
-      <h1>Internet Radio,<br><em>Reinvented.</em></h1>
-      <p class="hero-desc">
-        TuneScape is a free, open-source internet radio player built with Qt/C++.
-        Live cover art, artist biographies, thousands of stations — no ads, no accounts.
-      </p>
-      <div class="hero-actions">
-        <a href="https://sourceforge.net/projects/tunescape/files/latest/download" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
-              style="margin-right:8px; vertical-align:middle;">
-              <path d="M3 5.5l7-1v8H3v-7zm8-1.2l10-1.5v10.7H11V4.3zM3 13.5h7v8l-7-1v-7zm8 0h10v10.7l-10-1.5v-9.2z"/>
-          </svg>
-          Download for Windows
-        </a>
-        <a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank" class="btn-secondary">
-          View on GitHub
-        </a>
+  <div class="progress-container" aria-hidden="true">
+    <div class="progress-bar" id="scroll-progress"></div>
+  </div>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="TuneScape home">Tune<span>Scape</span></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Open navigation</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#whats-new">What&rsquo;s new</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://sourceforge.net/projects/tunescape/files/latest/download" class="nav-cta">Download</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">TuneScape 6.0.0 &middot; Now available</div>
+          <h1>Thousands of stations.<br><em>One clean player.</em></h1>
+          <p class="hero-desc">
+            A free and open-source internet radio player for Windows. Browse stations from around the world, save favorites, record streams and control playback without leaving the system tray.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://sourceforge.net/projects/tunescape/files/latest/download" class="btn-primary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3 5.5l7-1v8H3v-7zm8-1.2l10-1.5v10.7H11V4.3zM3 13.5h7v8l-7-1v-7zm8 0h10v10.7l-10-1.5v-9.2z"/>
+              </svg>
+              Download for Windows
+            </a>
+            <a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              View source
+            </a>
+          </div>
+
+          <p class="hero-note">Free forever &middot; No ads &middot; No accounts &middot; No telemetry</p>
+        </div>
+
+        <figure class="hero-visual animate animate-delay-1">
+          <button class="image-trigger hero-image-trigger" type="button"
+                  data-lightbox-src="assets/app-dark.png"
+                  data-lightbox-caption="TuneScape 6.0.0 — Dark theme"
+                  aria-label="Open a larger view of TuneScape with the Dark theme">
+            <img src="assets/app-dark.png" width="1156" height="680"
+                 alt="TuneScape 6.0.0 station list using the Dark theme">
+          </button>
+          <figcaption>
+            <span class="status-dot" aria-hidden="true"></span>
+            Dark theme &middot; Radio Browser station list
+          </figcaption>
+          <div class="hero-badge" aria-hidden="true">6.0.0</div>
+        </figure>
       </div>
+    </section>
+
+    <div class="product-facts" aria-label="Product information">
+      <span><strong>Windows</strong> desktop app</span>
+      <span><strong>Qt 6 + C++</strong> native build</span>
+      <span><strong>GPLv3</strong> open source</span>
+      <span><strong>Radio Browser</strong> powered</span>
     </div>
 
-    <!-- DEADZONE RADIO TOWER ILLUSTRATION -->
-    <div class="tower-art">
-      <img src="assets/tower.png" alt="Radio Tower">
-      <div class="radio-waves">
-        <svg viewBox="0 0 600 300">
-          <ellipse class="wave"/>
-        </svg>
+    <section id="features">
+      <div class="section-heading animate">
+        <div class="section-label">Designed for everyday listening</div>
+        <h2>Everything you need.<br><em>Nothing in the way.</em></h2>
+        <p class="section-desc">
+          TuneScape keeps discovery, playback and everyday controls in one focused desktop application.
+        </p>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- TICKER -->
-<div class="version-ticker">
-  <div class="ticker-inner">
-    <span class="ticker-item"><span>v5.0.1</span> Improved tray exit behavior & stability</span>
-    <span class="ticker-item"><span>v5.0.0</span> Track info panel with cover art &amp; artist bios</span>
-    <span class="ticker-item"><span>v4.9.0</span> Remove stations from favorites</span>
-    <span class="ticker-item"><span>v4.8.5</span> Export IceCast favorites to M3U</span>
-    <span class="ticker-item"><span>v4.7.0</span> Country selection filter</span>
-    <span class="ticker-item"><span>v4.6.0</span> Mini player with always-on-top mode</span>
-    <span class="ticker-item"><span>v4.5.0</span> New light &amp; dark themes</span>
-    <span class="ticker-item"><span>v4.3.1</span> FFT audio frequency spectrum</span>
-    <span class="ticker-item"><span>v5.0.1</span> Improved tray exit behavior & stability</span>
-    <span class="ticker-item"><span>v5.0.0</span> Track info panel with cover art &amp; artist bios</span>
-    <span class="ticker-item"><span>v4.9.0</span> Remove stations from favorites</span>
-    <span class="ticker-item"><span>v4.8.5</span> Export IceCast favorites to M3U</span>
-    <span class="ticker-item"><span>v4.7.0</span> Country selection filter</span>
-    <span class="ticker-item"><span>v4.6.0</span> Mini player with always-on-top mode</span>
-    <span class="ticker-item"><span>v4.5.0</span> New light &amp; dark themes</span>
-    <span class="ticker-item"><span>v4.3.1</span> FFT audio frequency spectrum</span>
-  </div>
-</div>
+      <div class="features-grid">
+        <article class="feature-card animate animate-delay-1">
+          <span class="feature-number">01</span>
+          <h3>Worldwide station browser</h3>
+          <p>Explore thousands of community-maintained stations with a clean, efficient list view powered by radio-browser.info.</p>
+        </article>
+        <article class="feature-card animate animate-delay-2">
+          <span class="feature-number">02</span>
+          <h3>Search and country browsing</h3>
+          <p>Find a station by name or narrow the list by country when you want something local or completely new.</p>
+        </article>
+        <article class="feature-card animate animate-delay-3">
+          <span class="feature-number">03</span>
+          <h3>Favorites and station details</h3>
+          <p>Keep your regular stations close, inspect stream details and open a broadcaster&rsquo;s homepage directly.</p>
+        </article>
+        <article class="feature-card animate animate-delay-1">
+          <span class="feature-number">04</span>
+          <h3>Live cover art and metadata</h3>
+          <p>See the current track, cover artwork and available artist information while the station is playing.</p>
+        </article>
+        <article class="feature-card animate animate-delay-2">
+          <span class="feature-number">05</span>
+          <h3>System tray controls</h3>
+          <p>Pause playback, switch station lists and keep the Now Playing panel visible without reopening the main window.</p>
+        </article>
+        <article class="feature-card animate animate-delay-3">
+          <span class="feature-number">06</span>
+          <h3>Stream recording</h3>
+          <p>Record the current radio stream locally and monitor the saved data while the recording is in progress.</p>
+        </article>
+        <article class="feature-card animate animate-delay-1">
+          <span class="feature-number">07</span>
+          <h3>Top, popular and new stations</h3>
+          <p>Jump quickly into curated station lists and discover what Radio Browser listeners are enjoying.</p>
+        </article>
+        <article class="feature-card animate animate-delay-2">
+          <span class="feature-number">08</span>
+          <h3>Five interface themes</h3>
+          <p>Choose System, Light, Dark, Classic or Cyberpunk and make the player feel at home on your desktop.</p>
+        </article>
+      </div>
+    </section>
 
-<!-- FEATURES -->
-<section id="features">
-  <div class="section-label animate">What you get</div>
-  <h2 class="animate animate-delay-1">Everything a radio<br>player <em>should</em> have.</h2>
-  <p class="section-desc animate animate-delay-2">
-    Built on Qt 6 with a clean, cross-platform architecture. Powered by open APIs and community radio databases.
-  </p>
-  <div class="features-grid">
-    <div class="feature-card animate animate-delay-1">
-      <span class="feature-icon">🎨</span>
-      <h3>Live Cover Art & Metadata</h3>
-      <p>Fetches cover art and artist biographies live from MusicBrainz, Cover Art Archive, and Wikipedia while you listen.</p>
-    </div>
-    <div class="feature-card animate animate-delay-2">
-      <span class="feature-icon">📡</span>
-      <h3>Thousands of Stations</h3>
-      <p>Powered by radio-browser.info — a community-maintained database with tens of thousands of radio stations worldwide.</p>
-    </div>
-    <div class="feature-card animate animate-delay-3">
-      <span class="feature-icon">🌍</span>
-      <h3>Country Filter</h3>
-      <p>Browse stations by country. Find local and international stations without digging through long generic lists.</p>
-    </div>
-    <div class="feature-card animate animate-delay-1">
-      <span class="feature-icon">📂</span>
-      <h3>M3U Playlist Import & Export</h3>
-      <p>Import radio playlists from radio-browser.info or export your favorite stations as M3U for VLC and other players.</p>
-    </div>
-    <div class="feature-card animate animate-delay-2">
-      <span class="feature-icon">🎚️</span>
-      <h3>FFT Spectrum Visualizer</h3>
-      <p>Real-time audio frequency spectrum visualization powered by an FFT engine built directly into the app.</p>
-    </div>
-    <div class="feature-card animate animate-delay-3">
-      <span class="feature-icon">🪟</span>
-      <h3>Mini Player</h3>
-      <p>A compact always-on-top mini player for minimal screen footprint. See what's playing without switching windows.</p>
-    </div>
-    <div class="feature-card animate animate-delay-1">
-      <span class="feature-icon">🌙</span>
-      <h3>Light & Dark Themes</h3>
-      <p>Polished light and dark appearances with a refined, elegant UI. More themes planned for future releases.</p>
-    </div>
-    <div class="feature-card animate animate-delay-2">
-      <span class="feature-icon">🔁</span>
-      <h3>Auto-Reconnect</h3>
-      <p>When a connection drops, TuneScape detects it and reconnects automatically — so you never miss a beat.</p>
-    </div>
-    <div class="feature-card animate animate-delay-3">
-      <span class="feature-icon">🔓</span>
-      <h3>Free & Open Source</h3>
-      <p>Released under GPLv3. No ads, no accounts, no telemetry. The source code is fully available on GitHub.</p>
-    </div>
-  </div>
-</section>
+    <section id="screenshots">
+      <div class="section-heading animate">
+        <div class="section-label">A player that fits your desktop</div>
+        <h2>Choose your<br><em>atmosphere.</em></h2>
+        <p class="section-desc">
+          Switch between five built-in appearances. Preview three of them below; System and Classic are available inside the app.
+        </p>
+      </div>
 
-<!-- CHANGELOG -->
-<section id="changelog" style="max-width:1200px;">
-  <div class="section-label animate">Release history</div>
-  <h2 class="animate animate-delay-1">What's <em>new.</em></h2>
-  <p class="section-desc animate animate-delay-2">A brief history of TuneScape updates.</p>
-  <div class="changelog-list">
-      <div class="changelog-item animate">
+      <div class="theme-showcase animate animate-delay-1">
+        <div class="theme-tabs" role="group" aria-label="Choose a theme preview">
+          <button type="button" class="theme-tab" data-theme-src="assets/app-light.png"
+                  data-theme-name="Light" data-theme-alt="TuneScape station list using the Light theme"
+                  aria-pressed="false">Light</button>
+          <button type="button" class="theme-tab active" data-theme-src="assets/app-dark.png"
+                  data-theme-name="Dark" data-theme-alt="TuneScape station list using the Dark theme"
+                  aria-pressed="true">Dark</button>
+          <button type="button" class="theme-tab" data-theme-src="assets/app-cyberpunk.png"
+                  data-theme-name="Cyberpunk" data-theme-alt="TuneScape station list using the Cyberpunk theme"
+                  aria-pressed="false">Cyberpunk</button>
+        </div>
+
+        <figure class="theme-stage">
+          <button id="theme-preview-trigger" class="image-trigger" type="button"
+                  data-lightbox-src="assets/app-dark.png"
+                  data-lightbox-caption="TuneScape 6.0.0 — Dark theme"
+                  aria-label="Open a larger view of the Dark theme">
+            <img id="theme-preview" src="assets/app-dark.png" width="1156" height="680"
+                 loading="lazy" alt="TuneScape station list using the Dark theme">
+          </button>
+          <figcaption><strong id="theme-name">Dark</strong> theme</figcaption>
+        </figure>
+
+        <div class="theme-list" aria-label="All available themes">
+          <span>System</span>
+          <span>Light</span>
+          <span>Dark</span>
+          <span>Classic</span>
+          <span>Cyberpunk</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tray-section" aria-labelledby="tray-title">
+      <div class="tray-copy animate">
+        <div class="section-label">Playback without interruption</div>
+        <h2 id="tray-title">Your radio stays<br><em>within reach.</em></h2>
+        <p class="section-desc">
+          TuneScape 6.0.0 expands the system tray experience. Control playback, jump into Top, Popular or New stations and see what is playing while the main window is minimized.
+        </p>
+        <ul class="check-list">
+          <li>Pause playback or exit the application</li>
+          <li>Open curated station lists from the tray</li>
+          <li>Keep the Now Playing panel visible</li>
+          <li>Highlight the station currently on air</li>
+        </ul>
+      </div>
+
+      <div class="tray-collage animate animate-delay-2">
+        <button class="image-trigger tray-shot tray-shot-now" type="button"
+                data-lightbox-src="assets/now-playing.png"
+                data-lightbox-caption="Now Playing panel"
+                aria-label="Open a larger view of the Now Playing panel">
+          <img src="assets/now-playing.png" width="487" height="121" loading="lazy"
+               alt="TuneScape Now Playing panel above the Windows desktop">
+        </button>
+        <button class="image-trigger tray-shot tray-shot-controls" type="button"
+                data-lightbox-src="assets/tray-controls.png"
+                data-lightbox-caption="System tray controls"
+                aria-label="Open a larger view of the system tray controls">
+          <img src="assets/tray-controls.png" width="417" height="322" loading="lazy"
+               alt="TuneScape playback controls in the system tray menu">
+        </button>
+        <button class="image-trigger tray-shot tray-shot-stations" type="button"
+                data-lightbox-src="assets/tray-stations.png"
+                data-lightbox-caption="Station list in the system tray"
+                aria-label="Open a larger view of the station list in the system tray">
+          <img src="assets/tray-stations.png" width="387" height="750" loading="lazy"
+               alt="TuneScape station list opened from the Windows system tray">
+        </button>
+      </div>
+    </section>
+
+    <section id="whats-new">
+      <div class="release-panel animate">
+        <div class="release-intro">
+          <div class="section-label">Major release</div>
+          <div class="release-version">6.0.0</div>
+          <h2>Focused on the way<br><em>you actually listen.</em></h2>
+          <p>
+            Version 6 is a cleaner, more focused TuneScape. Legacy secondary modes have been removed so development can concentrate on the main Radio Browser experience.
+          </p>
+          <a href="https://github.com/grzesiekkedzior/TuneScape/releases" target="_blank" rel="noopener noreferrer" class="text-link">View all releases <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="release-changes">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>New list-based station browser</h3>
+              <p>A clearer table view with station icons, useful details and better use of space.</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Improved countries and favorites</h3>
+              <p>More consistent browsing, playback highlighting and station actions across the application.</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Expanded tray experience</h3>
+              <p>Station lists, playback actions and a refreshed Now Playing panel are available from the desktop.</p>
+            </div>
+          </article>
+          <article>
+            <span>04</span>
+            <div>
+              <h3>Five themes and a major refactor</h3>
+              <p>A broader visual choice backed by substantial internal cleanup for easier future development.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section" id="download">
+      <div class="download-card animate">
+        <div class="download-copy">
+          <div class="section-label">Ready to listen?</div>
+          <h2>Make the world<br><em>your radio dial.</em></h2>
+          <p>TuneScape 6.0.0 is free, open source and available for Windows.</p>
+          <div class="hero-actions">
+            <a href="https://sourceforge.net/projects/tunescape/files/latest/download" class="btn-primary">Download TuneScape 6.0.0</a>
+            <a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank" rel="noopener noreferrer" class="btn-secondary">Browse the code</a>
+          </div>
+        </div>
+        <div class="download-art" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="support-block animate">
         <div>
-          <div class="version-tag">v5.0.1</div>
-          <div class="exp-tag">Patch</div>
+          <div class="section-label">Community powered</div>
+          <h2>Help TuneScape<br><em>keep growing.</em></h2>
+          <p class="section-desc">
+            TuneScape is developed in free time. Contributions are welcome, but a star, useful bug report or a little feedback helps too.
+          </p>
+          <a href="https://www.paypal.com/donate/?hosted_button_id=MW4VMJ8YHSZF2" target="_blank" rel="noopener noreferrer" class="btn-primary">Donate via PayPal</a>
         </div>
-      <div class="changelog-text">
-        <h4>Stability Improvements</h4>
-          <p>Improved system tray behavior and fixed an issue where the application could remain running after exit.</p>
+
+        <div class="support-links">
+          <a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">&#9733;</span>
+            <strong>Star on GitHub</strong>
+            <small>Help more people discover the project.</small>
+          </a>
+          <a href="https://github.com/grzesiekkedzior/TuneScape/issues" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">&#9888;</span>
+            <strong>Report an issue</strong>
+            <small>Found a bug? Describe it on GitHub.</small>
+          </a>
+          <a href="https://github.com/grzesiekkedzior/TuneScape/issues/new/choose" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">&#9993;</span>
+            <strong>Send feedback</strong>
+            <small>Share an idea for a future release.</small>
+          </a>
         </div>
       </div>
-    <div class="changelog-item animate">
-      <div>
-        <div class="version-tag">v5.0.0</div>
-        <div class="exp-tag">Experimental</div>
-      </div>
-      <div class="changelog-text">
-        <h4>Track Info Panel — Cover Art & Artist Bios</h4>
-        <p>Major step forward. A new panel fetches and displays live cover art from Cover Art Archive and artist biographies from Wikipedia alongside MusicBrainz metadata, all while you listen.</p>
-      </div>
+    </section>
+  </main>
+
+  <div class="license-bar">
+    <div class="license-tags" aria-label="Licenses">
+      <span class="license-tag">GPLv3 &middot; TuneScape</span>
+      <span class="license-tag">MIT &middot; Combinear theme</span>
+      <span class="license-tag">GPLv2 &middot; App icon</span>
     </div>
-
-    <div class="changelog-item animate animate-delay-1">
-      <div>
-        <div class="version-tag">v4.9.0</div>
-        <div class="exp-tag">Experimental</div>
-      </div>
-      <div class="changelog-text">
-        <h4>Remove Favorite Stations</h4>
-        <p>You can now remove radio stations from your favorites list directly while browsing.</p>
-      </div>
-    </div>
-
-    <div class="changelog-item animate animate-delay-2">
-      <div>
-        <div class="version-tag">v4.8.5</div>
-        <div class="exp-tag">Experimental</div>
-      </div>
-      <div class="changelog-text">
-        <h4>IceCast Favorites → M3U Export</h4>
-        <p>Export your IceCast favorite stations to an M3U playlist file for use in external players.</p>
-      </div>
-    </div>
-
-    <div class="changelog-item animate animate-delay-3">
-      <div>
-        <div class="version-tag">v4.8.4</div>
-        <div class="exp-tag">Experimental</div>
-      </div>
-      <div class="changelog-text">
-        <h4>M3U Export & Import</h4>
-        <p>Export playlists and import M3U files from radio-browser.info. Load any category, tag, or full database export straight into TuneScape.</p>
-      </div>
-    </div>
-
-    <div class="changelog-item animate animate-delay-1">
-      <div>
-        <div class="version-tag">v4.7.0</div>
-      </div>
-      <div class="changelog-text">
-        <h4>Country Selection</h4>
-        <p>Browse stations by country. A major quality-of-life improvement for finding stations in a specific region.</p>
-      </div>
-    </div>
-
-    <div class="changelog-item animate animate-delay-2">
-      <div>
-        <div class="version-tag">v4.6.0</div>
-      </div>
-      <div class="changelog-text">
-        <h4>Mini Player</h4>
-        <p>A compact always-on-top mini player that displays only the essential information — stay informed without losing screen space.</p>
-      </div>
-    </div>
-
-    <div class="changelog-item animate animate-delay-3">
-      <div>
-        <div class="version-tag">v4.5.0</div>
-      </div>
-      <div class="changelog-text">
-        <h4>Redesigned Light & Dark Themes</h4>
-        <p>A new, more elegant appearance for both themes. Architecture also prepared for adding further theme options in the future.</p>
-      </div>
-    </div>
-
-    <div class="changelog-item animate animate-delay-4">
-      <div>
-        <div class="version-tag">v4.3.1</div>
-      </div>
-      <div class="changelog-text">
-        <h4>FFT Audio Spectrum Visualizer</h4>
-        <p>Real-time audio frequency spectrum powered by a custom FFT implementation. Built using QGraphicsView after significant technical work on buffer and stream synchronization.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SCREENSHOTS -->
-<section id="screenshots" style="max-width:1200px;">
-  <div class="section-label animate">In action</div>
-  <h2 class="animate animate-delay-1">See what's<br><em>inside.</em></h2>
-  <p class="section-desc animate animate-delay-2">
-    A glimpse of TuneScape's interface — dark, minimal, and focused on the music.
-  </p>
-  <div class="screenshots-grid">
-
-    <div class="screenshot-card animate animate-delay-1" onclick="openLightbox('assets/screen1.png', 'Main Player')">
-      <img src="assets/screen1.png" alt="TuneScape main window">
-      <div class="screenshot-caption">Main Player</div>
-    </div>
-
-    <div class="screenshot-card animate animate-delay-2" onclick="openLightbox('assets/screen3.png', 'Tiles')">
-      <img src="assets/screen3.png" alt="TuneScape tiles">
-      <div class="screenshot-caption">Tiles</div>
-    </div>
-
-    <div class="screenshot-card animate animate-delay-3" onclick="openLightbox('assets/screen4.png', 'Countries')">
-      <img src="assets/screen4.png" alt="TuneScape countries">
-      <div class="screenshot-caption">Countries</div>
-    </div>
-
-    <div class="screenshot-card animate animate-delay-1" onclick="openLightbox('assets/screen6.png', 'Cover')">
-      <img src="assets/screen6.png" alt="TuneScape favorites">
-      <div class="screenshot-caption">Cover</div>
-    </div>
-
-    <div class="screenshot-card animate animate-delay-2" onclick="openLightbox('assets/screen7.png', 'Dark Theme')">
-      <img src="assets/screen7.png" alt="TuneScape FFT spectrum visualizer">
-      <div class="screenshot-caption">Dark Theme</div>
-    </div>
-
-    <div class="screenshot-card animate animate-delay-3" onclick="openLightbox('assets/screen9.png', 'Dark Theme Tiles')">
-      <img src="assets/screen9.png" alt="TuneScape dark theme">
-      <div class="screenshot-caption">Dark Theme Tiles</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <div class="lightbox-window" onclick="event.stopPropagation()">
-    <div class="lightbox-bar">
-      <span onclick="closeLightbox()"></span>
-      <span></span>
-      <span></span>
-      <div class="lightbox-title" id="lightbox-title"></div>
-    </div>
-    <img id="lightbox-img" src="" alt="">
-  </div>
-</div>
-
-<!-- SUPPORT -->
-<section id="support" style="max-width:1200px; padding-top: 0;">
-  <div class="support-block animate">
-    <div class="section-label" style="justify-content:center;">Support the project</div>
-    <h2>Help keep TuneScape<br><em>alive & growing.</em></h2>
-    <p class="section-desc">
-      TuneScape is built and maintained in free time. If you enjoy the app, a contribution goes a long way — but there are plenty of other ways to help too.
+    <p>
+      TuneScape is released under the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">GPLv3 license</a>.
     </p>
-    <a href="https://www.paypal.com/donate/?hosted_button_id=MW4VMJ8YHSZF2" target="_blank" class="btn-primary" style="margin: 0 auto; display:inline-flex;">
-      💙 Donate via PayPal
-    </a>
-    <div class="ways-list">
-      <div class="way-item">
-        <span class="way-icon">⭐</span>
-        Star on GitHub
+  </div>
+
+  <footer>
+    <div class="footer-logo">Tune<span>Scape</span></div>
+    <p>Open-source internet radio by <a href="https://github.com/grzesiekkedzior" target="_blank" rel="noopener noreferrer">grzesiekkedzior</a>.</p>
+    <ul class="footer-links">
+      <li><a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://sourceforge.net/projects/tunescape/" target="_blank" rel="noopener noreferrer">SourceForge</a></li>
+      <li><a href="https://www.radio-browser.info/" target="_blank" rel="noopener noreferrer">Radio Browser</a></li>
+    </ul>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <div class="lightbox-window">
+      <div class="lightbox-bar">
+        <span class="window-dot window-dot-red" aria-hidden="true"></span>
+        <span class="window-dot window-dot-amber" aria-hidden="true"></span>
+        <span class="window-dot window-dot-green" aria-hidden="true"></span>
+        <div class="lightbox-title" id="lightbox-title"></div>
+        <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close image preview">&times;</button>
       </div>
-      <div class="way-item">
-        <span class="way-icon">🐛</span>
-        Report issues
-      </div>
-      <div class="way-item">
-        <span class="way-icon">📢</span>
-        Share with friends
-      </div>
-      <div class="way-item">
-        <span class="way-icon">💬</span>
-        Send feedback
+      <div class="lightbox-content">
+        <button type="button" class="lightbox-nav lightbox-prev" data-lightbox-prev aria-label="Previous image">&#8249;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button type="button" class="lightbox-nav lightbox-next" data-lightbox-next aria-label="Next image">&#8250;</button>
       </div>
     </div>
   </div>
-</section>
 
-<!-- LICENSE BAR -->
-<div class="license-bar">
-  <div class="license-tags">
-    <span class="ltag">GPLv3</span>
-    <span class="ltag">MIT — Combinear theme</span>
-    <span class="ltag">GPL v2 — App icon</span>
-  </div>
-  <p>TuneScape is released under the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPLv3 license</a>. Dark theme "Combinear" from <a href="https://qss-stock.devsecstudio.com/" target="_blank">Qt Style Sheets Templates</a> under MIT.</p>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Tune<span>Scape</span></div>
-  <p>An open-source internet radio player by <a href="https://github.com/grzesiekkedzior" target="_blank" style="color:var(--accent);text-decoration:none;">grzesiekkedzior</a></p>
-  <ul class="footer-links">
-    <li><a href="https://github.com/grzesiekkedzior/TuneScape" target="_blank">GitHub</a></li>
-    <li><a href="https://sourceforge.net/projects/tunescape/" target="_blank">SourceForge</a></li>
-    <li><a href="https://www.radio-browser.info/" target="_blank">radio-browser.info</a></li>
-  </ul>
-</footer>
-
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
